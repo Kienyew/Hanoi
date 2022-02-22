@@ -22,7 +22,7 @@ func can_add_disk(disk) -> bool:
 		return true
 	else:
 		var top_disk = top()
-		return disk.size < top_disk.size
+		return disk.size <= top_disk.size
 	
 func top():
 	var disks = $DiskContainer.get_children()

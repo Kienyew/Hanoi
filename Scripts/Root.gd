@@ -11,7 +11,7 @@ func configure_form_input(input: String):
 		peg.clear()
 		
 	var parts = input.split("|")
-	for i in [0, 1, 2]:
+	for i in range(0, len(parts)):
 		# GDScript only provide split_floats but not split_ints
 		var sizes = parts[i].lstrip('"|').rstrip('"|').replace(" ", "").split_floats(",", false)
 		for size in sizes:
